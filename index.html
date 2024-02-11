@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/style.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <header>
+            <h1>Bookshelf Apps</h1>
+        </header>
+        <main>
+            <aside class="card">
+                <div id="profile">
+                    <h2>Ir'fikri Anggara Hasbar</h2>
+                    <img src="assets/image/fikri.jpg" alt="fikri">
+                    <p>Mahasiswa Universitas Negeri Makassar</p>
+                </div>
+                <div id="count-wrapper">
+                    <h3>Jumlah Buku</h3>
+                    <p id="count"></p>
+                </div>
+                <div id="add-book">
+                    <!-- <img id="icon-add" src="assets/image/add.png" alt=""> -->
+                    <button id="btn-add">Tambah Buku</button>
+                </div>
+            </aside>
+            <section class="card" id="judul">
+                <h2>Selamat Datang di Bookshelf Apps</h2>
+            </section>
+            <section class="card" id="uncompleted">
+                <h2>Belum Dibaca</h2>
+                <div id="uncompleted-wrap">
+                </div>
+            </section>
+            <section class="card" id="completed">
+                <h2>Sudah Dibaca</h2>
+                <div id="completed-wrap">
+
+                </div>
+            </section>
+
+            <section class="card" id="search-book">
+                <h2>Cari Buku</h2>
+                <label for="cari-buku">Masukkan Judul</label>
+                <br />
+                <input autocomplete="off" type="text" name="cari-buku" id="cari" placeholder="Masukkan Judul Buku">
+                <button id="btn-cari">Cari</button>
+                <div id="tampil-search">
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; Created By Ir'fikri Anggara Hasbar</p>
+        </footer>
+    </div>
+    <div id="input" class="card bayangan inputForm">
+        <form class="form" action="#" id="form">
+            <h3>Data Buku</h3>
+            <div class="form-wrap inputJudul">
+                <label for="judulbuku">Judul</label>
+                <input autocomplete="off" id="judul-buku" name="judulbuku" type="text"
+                    placeholder="Masukkan Judul Buku">
+            </div>
+            <div class="form-wrap inputAuthor">
+                <label for="authorbuku">Penulis</label>
+                <input autocomplete="off" id="author-buku" name="authorbuku" type="text"
+                    placeholder="Masukkan Penulis Buku">
+            </div>
+            <div class="form-wrap inputTangal">
+                <label for="tahunbuku">Tahun Rilis</label>
+                <input autocomplete="off" id="tahun-buku" name="tahunbuku" type="number"
+                    placeholder="Masukkan Tahun Rilis">
+            </div>
+            <div class=" inputCompleted">
+                <input id="iscompleted" type="checkbox" name="is-compeleted" id="iscompleted" value="true">
+                <label for="is-compeleted">Sudah Dibaca</label>
+            </div>
+            <input type="submit" value="submit" id="submit" class="eksekusi">
+            <button id="edit">Edit</button>
+            <button id="cancel">Batal</button>
+        </form>
+    </div>
+    <script src="assets/script/script.js"></script>
+</body>
+
+</html>

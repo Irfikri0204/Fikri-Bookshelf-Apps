@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+header {
+    height: 15vh;
+    line-height: 15vh;
+}
+
+footer {
+    height: 10vh;
+    line-height: 10vh;
+}
+
+header,
+footer {
+    color: aliceblue;
+    background: #365486;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+main {
+    gap: 1rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-areas:
+        'sidebar judul judul'
+        'sidebar left right'
+        'search search search';
+    grid-template-columns: auto 1.5fr 1.5fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+#input button,
+#input #submit {
+    color: aliceblue;
+    border: 0;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-right: 0.5em;
+    background: #365486;
+}
+
+#edit {
+    display: none;
+}
+
+aside {
+    grid-area: sidebar;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#judul {
+    grid-area: judul;
+}
+
+#uncompleted {
+    grid-area: left;
+}
+
+#completed {
+    grid-area: right;
+
+}
+
+.container {
+    background: #7C93C3;
+}
+
+#input {
+    display: none;
+    box-sizing: border-box;
+    padding: 2em;
+    width: 40vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+}
+
+.form-wrap label {
+    margin-bottom: 4px;
+    font-size: 18px;
+}
+
+.form-wrap input {
+    height: 1.5rem;
+    padding-left: 10px;
+}
+
+.bayangan {
+    box-shadow: -10px -30px 2px rgba(0, 0, 0, 0.795);
+}
+
+#input h3 {
+    text-align: center;
+}
+
+.inputCompleted {
+    margin-bottom: 0.5em;
+}
+
+#uncompleted article img,
+#completed article img {
+    max-height: 90px;
+}
+
+article {
+    display: grid;
+    grid-template-areas:
+        'gambar info'
+        'gambar tombol';
+    margin-bottom: 10px;
+    justify-content: start;
+    gap: 10px;
+}
+
+article img {
+    grid-area: gambar;
+}
+
+article .infoBuku {
+    grid-area: info;
+}
+
+article .tombol {
+    grid-area: tombol;
+}
+
+.tombol button {
+    color: aliceblue;
+    border: 0;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-right: 0.5em;
+}
+
+.tombol .undo {
+    background-color: #d18936;
+}
+
+.tombol .undo:hover {
+    background-color: #a7620d;
+}
+
+.tombol .done:hover {
+    background-color: rgb(10, 117, 6);
+}
+
+.tombol .done {
+    background: rgb(67, 167, 9);
+}
+
+.tombol .edit {
+    background: #365486;
+}
+
+.tombol .hapus {
+    background: #D24545;
+}
+
+#search-book {
+    grid-area: search;
+}
+
+#search-book button {
+    color: aliceblue;
+    border: 0;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: #365486;
+}
+
+#search-book input {
+    height: 1.5rem;
+    padding-left: 10px;
+}
+
+#tampil-search {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+        'gambar-search info-search';
+}
+
+#tampil-search img {
+    grid-area: gambar-search;
+    max-width: 250px;
+}
+
+#tampil-search #info-search {
+    grid-area: info-search;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 1rem;
+    background-color: #EEF5FF;
+}
+
+#profile,
+#count-wrapper,
+#add-book {
+    margin: 1rem;
+}
+
+#profile img {
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+aside button {
+    color: aliceblue;
+    background: #365486;
+    border: 0;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+aside button:hover,
+.tombol .edit:hover,
+#search-book button:hover,
+#input button:hover,
+#input #submit:hover {
+    background: #032874;
+}
+
+.tombol .hapus:hover {
+    background: #962e2e;
+}
+
+aside #count-wrapper p {
+    font-size: 50px;
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'sidebar'
+            'judul'
+            'left'
+            'right'
+            'search';
+    }
+
+    main #content-wrapper>* {
+        flex-flow: column nowrap;
+    }
+
+    article {
+        grid-template-areas:
+            'gambar'
+            'info'
+            'tombol';
+    }
+
+    #tampil-search {
+        grid-template-areas: 'gambar-search' 'info-search';
+    }
+
+    #info-search {
+        margin-top: 15px;
+    }
+
+    #input {
+
+        width: 70vw;
+    }
+}
